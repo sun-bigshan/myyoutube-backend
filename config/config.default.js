@@ -1,6 +1,7 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
+const secret = require('./secret');
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -27,7 +28,7 @@ module.exports = appInfo => {
 
   config.mongoose = {
     client: {
-      url: 'mongodb://youtubeadmin:123456@119.29.89.251:32017/myyoutube',
+      url: secret.mongoConfig.url,
       options: {},
       // mongoose global plugins, expected a function or an array of function and options
       plugins: [],
