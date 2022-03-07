@@ -9,7 +9,7 @@ module.exports = app => {
   // 设置基础路径
   router.prefix('/api/v1');
   // 首页
-  router.post('/', controller.home.index);
+  router.get('/', controller.home.index);
   // 用户注册
   router.post('/users', controller.user.create);
   // 用户登录
