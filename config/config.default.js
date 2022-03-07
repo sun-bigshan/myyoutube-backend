@@ -27,7 +27,7 @@ module.exports = appInfo => {
 
   config.mongoose = {
     client: {
-      url: process.env.MONGO_URL,
+      url: process.env.MONGO_URL || 'mongodb://youtubeadmin:123456@119.29.89.251:32017/myyoutube',
       options: {},
       // mongoose global plugins, expected a function or an array of function and options
       plugins: [],
